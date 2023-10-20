@@ -1,5 +1,5 @@
 # Svelte + Vite
-
+![https://ik.imagekit.io/dumani/wp-content/uploads/2023/03/image-14.png]
 This template should help get you started developing with Svelte in Vite.
 
 ## Recommended IDE Setup
