@@ -1,10 +1,12 @@
 <script>
     import { link } from 'svelte-spa-router'
+    import { page } from '../lib/store'
 </script>
+
 <!-- 네비게이션바 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container-fluid">
-        <a use:link={link} class="navbar-brand" href="/">TAEHOS</a>
+        <a use:link class="navbar-brand" href="/" on:click="{()=> {$page = 0}}">TAEHOS</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -15,13 +17,13 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" />
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-collapse visible" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a use:link={link} class="nav-link" href="/user-create">회원가입</a>
+                <li class="navbar-item">
+                    <a use:link class="nav-link" href="/user-create">회원가입</a>
                 </li>
                 <li class="nav-item">
-                    <a use:link={link} class="nav-link" href="/user-login">로그인</a>
+                    <a use:link class="nav-link" href="/user-login">로그인</a>
                 </li>
             </ul>
         </div>
