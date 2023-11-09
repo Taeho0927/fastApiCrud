@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  fastapi:
+    image: fastapi
+    command: uvicorn main:app --reload --host "0.0.0.0"
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/code/app
+  taehos:
+    image: svelte
+    command: npm run dev
+    ports:
+      - 80:5173
